@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './assets/style/reset.less'
+import 'nprogress/nprogress.css'
 import router from './router.js'
 Vue.config.productionTip = false
 new Vue({
