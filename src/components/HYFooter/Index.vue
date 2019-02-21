@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <router-link to="/films" active-class='active'>
+    <router-link to="/films/nowPlaying" active-class='active'>
       <i class="iconfont icon-dianying"></i>
       <span>电影</span>
     </router-link>

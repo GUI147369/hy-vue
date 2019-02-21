@@ -4,6 +4,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Film from './views/Film.vue'
+import NowPlaying from './views/NowPlaying.vue'
+import ComingSoon from './views/ComingSoon.vue'
 import Cinema from './views/Cinema.vue'
 import Center from './views/Center.vue'
 import City from './views/City.vue'
@@ -26,7 +28,17 @@ let router = new VueRouter({
       children: [
         {
           path: 'films',
-          component: Film
+          component: Film,
+          children: [
+            {
+              path: 'nowPlaying',
+              component: NowPlaying
+            },
+            {
+              path: 'comingSoon',
+              component: ComingSoon
+            }
+          ]
         },
         {
           path: 'cinemas',
@@ -40,13 +52,13 @@ let router = new VueRouter({
         // localhost:8080/#/会自动转为 localhost：8080/#/films
         {
           path: '',
-          redirect: '/films'
+          redirect: '/films/nowPlaying'
         }
       ]
     },
     {
       path: '/city',
-      components: City
+      component: City
     },
     {
       path: '/detail/:id',
@@ -80,30 +92,35 @@ let router = new VueRouter({
           return h('div', '设置')
         }
       }
+    },
+    {
+      path: '/filmOrder',
+      component: {
+        render (h) {
+          return h('div', '电影订单')
+        }
+      }
+    },
+    {
+      path: '/groupOrder',
+      component: {
+        render (h) {
+          return h('div', '拼团订单')
+        }
+      }
+    },
+    // 设置一个 通配符的 一级路由，当url地址无法与上面的规则匹配的时候，就会跟我匹配。
+    {
+      path: '*',
+      redirect: '/films/nowPlaying'
     }
-    // {
-    //   path: '/films',
-    //   component: Film
-    // },
-    // {
-    //   path: '/cinemas',
-    //   component: Cinema
-    // },
-    // {
-    //   path: '/center',
-    //   component: Center
-    // },
-    // {
-    //   path: '/city',
-    //   component: City
-    // }
   ]
 })
 router.beforeEach((to, from, next) => {
   // 开始Nprogress
   Nprogress.start()
   let nickName = sessionStorage.getItem('nickName')
-  let list = ['/card', '/money', '/card']
+  let list = ['/card', '/money', '/card', '/filmOrder', '/groupOrder']
   if (list.indexOf(to.path) > -1 && !nickName) {
     next({
       path: '/login',

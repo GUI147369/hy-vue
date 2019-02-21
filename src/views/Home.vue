@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <!-- 放置一个坑 后面的页面的切换，会按照路由的对照表去渲染这个坑 -->
     <!-- 放置films cinema center页面 -->
     <router-view></router-view>
