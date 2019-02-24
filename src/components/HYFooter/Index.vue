@@ -16,16 +16,17 @@
 </template>
 <style lang="less">
   .footer {
+    width: 360px;
     height: 50px;
-    border-top: 1px solid #cbcbcb;
     background: #fefefe;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
     position: fixed;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
+    border-top: 1px solid #cbcbcb;
     a {
       display: flex;
       flex-direction: column;

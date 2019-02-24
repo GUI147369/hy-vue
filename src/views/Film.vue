@@ -1,7 +1,7 @@
 <template>
   <div class="film-list">
     <router-link tag='div' to='/city' class="address">
-      <span>北京</span>
+      <span>{{ curCityName }}</span>
       <i class="iconfont icon-xiajiantou"></i>
     </router-link>
     <!-- 导航 -->
@@ -24,12 +24,18 @@ export default {
   components: {
     HYBanner,
     HYTabs
+  },
+  computed: {
+    curCityName () {
+      return this.$store.state.curCityName
+    }
   }
 }
 </script>
 <style lang='less'>
 .film-list {
   position: relative;
+  background: #FFFFFF;
   .address {
     position: absolute;
     top: 18px;

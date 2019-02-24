@@ -5,10 +5,9 @@
     <router-view></router-view>
 </template>
 <script>
-// import HYFooter from './components/HYFooter/Index.vue'
-// export default {
-//   components: {
-//     HYFooter
-//   }
-// }
+export default {
+  created () {
+    this.$store.dispatch('getCityName')
+  }
+}
 </script>

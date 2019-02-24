@@ -6,8 +6,8 @@
     <router-link to='/set' tag='li'>设置</router-link> -->
     <!-- 头像 -->
     <div class="avatar">
-      <router-link to='/login?redirect=center' tag='div' class="avatar-img"><img src="../../public/images/touxiang.png"/></router-link>
-      <router-link to='/login?redirect=center' tag='div'>立即登录</router-link>
+      <router-link to='/user' tag='div' class="avatar-img"><img src="../../public/images/touxiang.png"/></router-link>
+      <router-link to='/user' tag='div'>{{ }}</router-link>
     </div>
     <!--选项卡 -->
     <ul class="my-order-tab">
@@ -40,12 +40,26 @@
     </div>
   </div>
 </template>
+<script>
+import { mapState, mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapState([
+      'userName'
+    ]),
+    ...mapGetters([
+      'userNickName'
+    ])
+  }
+}
+</script>
+
 <style lang="less">
 /* 头像 */
 .content {
   .avatar {
     height: 150px;
-    background: url(../../public/images//center-bg.png);
+    background: url(../../public/images/center-bg.png);
     background-size: 100%  140px;
     padding: 20px 0 0 20px;
     box-sizing: border-box;

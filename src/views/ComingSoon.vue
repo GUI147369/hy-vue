@@ -56,6 +56,7 @@ export default {
 <style lang="less">
 /* wrap */
 .comingSoonList-wrap {
+  width: 360px;
   box-sizing: border-box;
   // ul
   .comingSoonList {

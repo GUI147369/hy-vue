@@ -4,14 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="hotcss" content="initial-dpr=1;max-width=640" >
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1039492_w5lxmyl7dr.css">
     <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
     <link rel="stylesheet" href="./lib/layui/layui.css">
+    <script src="./lib/hotcss.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8dkto6VOAb1OVkL0tnu2GC85eBdDvoHa"></script>
     <title>好影票</title>
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" v-cloak></div>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="./lib/swiper/swiper.min.js"></script>
     <script src="./lib/layui/layui.js"></script>

@@ -26,38 +26,41 @@ export default {
 
 <style lang="less">
 /*选项卡*/
-.tabs-bar {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-bottom: 1px solid rgb(219, 219, 219);
-  background: #FFFFFF;
-  .tabs-nav {
+.tabs-wrap {
+  width: 360px;
+  .tabs-bar {
     width: 100%;
+    height: 50px;
     display: flex;
+    align-items: center;
     position: relative;
-    li {
-      width: 50%;
-      text-align: center;
-      cursor: pointer;
-    }
-    .active {
-      color: #ff5f16;
-    }
-    /*选项卡底部横线*/
-    .tab-ink-bar-wrapper {
-      position: absolute;
-      top: 33px;
-      width: 50%;
-      height: 2px;
-      transition: all .5s;
-      .tab-ink-bar {
-        width: 55px;
-        display: block;
-        margin: auto;
-        border-bottom: 2px solid #ff5f16;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    background: #FFFFFF;
+    .tabs-nav {
+      width: 100%;
+      display: flex;
+      position: relative;
+      li {
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+      }
+      .active {
+        color: #ff5f16;
+      }
+      /*选项卡底部横线*/
+      .tab-ink-bar-wrapper {
+        position: absolute;
+        top: 33px;
+        width: 50%;
+        height: 2px;
+        transition: all .5s;
+        .tab-ink-bar {
+          width: 55px;
+          display: block;
+          margin: auto;
+          border-bottom: 2px solid #ff5f16;
+        }
       }
     }
   }

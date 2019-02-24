@@ -52,6 +52,7 @@ export default {
 <style lang="less">
   /* wrap */
 .nowPlayingList-wrap {
+  width: 360px;
   box-sizing: border-box;
   // ul
   .nowPlayingList {

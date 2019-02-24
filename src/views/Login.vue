@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="login-main">
     <!-- <h1>我是登录页</h1>
     <input type='text' placeholder='用户名' v-model='userName'/>
     <input type='password' placeholder='密码' v-model='passWord'/>
@@ -90,59 +90,64 @@ export default {
 }
 </script>
 <style lang="less">
-.login-logo {
-  margin: 50px auto;
-  margin-bottom: 80px;
-  img {
-    width: 150px;
-    margin: auto;
+.login-main {
+  overflow: hidden;
+  height: 100%;
+  background: #ffffff;
+  .login-logo {
+    padding: 50px 0;
+    margin:  auto;
+    img {
+      width: 150px;
+      margin: auto;
+    }
   }
-}
-.login-form {
-  text-align: center;
-  padding: 0 30px;
-  .error-tip {
-    font-size: 14px;
-    color: #f33333;
-    height: 40px;
-    line-height: 40px;
-    display: none;
-  }
-  button {
+  .login-form {
     text-align: center;
-    background: #3ea1f3;
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
-    border: 0;
-    border-radius: 4px;
-    color: #ffffff;
-  }
-  .from-group {
-    height: 30px;
-    margin: 10px auto;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #cccccc;
-    .input-wrap {
-      position: relative;
-      .form-input {
-        width: 100%;
-        height: 20px;
-        border: 0;
-      }
-      .clear {
-        z-index: 1000;
-        position: absolute;
-        right: 30px;
-        top: 4px;
-        width: 15px;
-        height: 15px;
-        line-height: 10px;
-        border-radius: 50%;
-        background: #7e7a7a;
-        .icon-cancel-1-copy {
-          font-size: 8px;
-          color: #ffffff;
+    padding: 0 30px;
+    .error-tip {
+      font-size: 14px;
+      color: #f33333;
+      height: 40px;
+      line-height: 40px;
+      display: none;
+    }
+    button {
+      text-align: center;
+      background: #3ea1f3;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      border: 0;
+      border-radius: 4px;
+      color: #ffffff;
+    }
+    .from-group {
+      height: 30px;
+      margin: 10px auto;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #cccccc;
+      .input-wrap {
+        position: relative;
+        .form-input {
+          width: 100%;
+          height: 20px;
+          border: 0;
+        }
+        .clear {
+          z-index: 1000;
+          position: absolute;
+          right: 30px;
+          top: 4px;
+          width: 15px;
+          height: 15px;
+          line-height: 10px;
+          border-radius: 50%;
+          background: #7e7a7a;
+          .icon-cancel-1-copy {
+            font-size: 8px;
+            color: #ffffff;
+          }
         }
       }
     }
